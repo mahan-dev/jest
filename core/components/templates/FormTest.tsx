@@ -20,9 +20,6 @@ export const RegistrationForm = () => {
       setError("Password must be at least 6 characters");
       return;
     }
-
-    
-    
   };
 
   return (

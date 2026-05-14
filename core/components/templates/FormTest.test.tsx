@@ -9,6 +9,15 @@ describe("Registration Form", () => {
     expect(screen.getByTestId("password-input")).toBeInTheDocument();
     expect(screen.getByTestId("submit-button")).toBeInTheDocument();
   });
+
+  test("shows error when fields are empty", () => {
+    render(<RegistrationForm />);
+    fireEvent.click(screen.getByTestId("submit-button"));
+
+    expect(screen.getByTestId("error")).toHaveTextContent(
+      "All fields are required",
+    );
+  });
 });
 // describe("RegistrationForm", () => {
 //   test("renders all form fields", () => {
