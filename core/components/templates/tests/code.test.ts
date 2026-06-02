@@ -1,4 +1,4 @@
-import { calcFunction } from "../code";
+import { calcFunction, dataList } from "../code";
 
 describe("gte - greater than or equal to ", () => {
   it("should return true if  a is greater than b", () => {
@@ -12,5 +12,16 @@ describe("gte - greater than or equal to ", () => {
   it("should return true if a is equal to b", () => {
     const res = calcFunction(4, 4);
     expect(res).toBe(true);
+  });
+});
+
+describe("check arrayItem", () => {
+  it("should return true if it founded", () => {
+    const data = dataList;
+
+    const names = data.map((item) => item.split(" ")[0]);
+    console.log("🏝️ ~ code.test.ts:22 -> names: ", names);
+
+    expect(names).toContain("apple");
   });
 });
