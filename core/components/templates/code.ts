@@ -4,4 +4,10 @@ const calcFunction = (a: number, b: number) => {
 
 const dataList = ["apple 🍎", "orange 🍊", "banana 🍌"];
 
-export { calcFunction, dataList };
+const objectList = {
+  id: 1,
+  name: "alex",
+  address: "st 423, parkway, block 2 1",
+};
+
+export { calcFunction, dataList, objectList };

@@ -1,4 +1,4 @@
-import { calcFunction, dataList } from "../code";
+import { calcFunction, dataList, objectList } from "../code";
 
 describe("gte - greater than or equal to ", () => {
   it("should return true if  a is greater than b", () => {
@@ -23,5 +23,18 @@ describe("check arrayItem", () => {
     console.log("🏝️ ~ code.test.ts:22 -> names: ", names);
 
     expect(names).toContain("apple");
+  });
+});
+
+describe("test object", () => {
+  it("should return true if obj name founded", () => {
+    const userObj = objectList;
+
+    expect(userObj).toMatchObject({ id: 1, name: "alex" }); //specific details
+    expect(userObj).toEqual({
+      id: 1,
+      name: "alex",
+      address: "st 423, parkway, block 2 1",
+    }); // to be the real object output
   });
 });
