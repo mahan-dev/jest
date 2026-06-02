@@ -36,5 +36,7 @@ describe("test object", () => {
       name: "alex",
       address: "st 423, parkway, block 2 1",
     }); // to be the real object output
+
+    expect(userObj).toHaveProperty("id", 1) //  search for exact data
   });
 });
